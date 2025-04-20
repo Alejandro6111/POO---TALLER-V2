@@ -1,18 +1,46 @@
-## Getting Started
+📂 #Proyecto Java: Gestor de Arreglos Unidimensionales y Bidimensionales 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+🔹 Versión: 1.0
 
-## Folder Structure
+🔹 Lenguaje: Java
 
-The workspace contains two folders by default, where:
+🔹 Paradigma: Programación Orientada a Objetos (POO)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+🔹 Patrón de Diseño: Modelo-Vista-Controlador (MVC)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+📌 #Descripción del Proyecto
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Este proyecto implementa un gestor de arreglos (arrays) en Java, con operaciones para:
 
-## Dependency Management
+✅ Arreglos unidimensionales (15 métodos).
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+✅ Arreglos bidimensionales (mismos métodos adaptados).
+
+✅ Interacción por consola mediante menús.
+
+✅ Patrón MVC para una estructura limpia y mantenible.
+
+⚙️ #Requisitos
+
+Java JDK 8+ (para ejecutar el proyecto).
+
+IDE recomendado: IntelliJ IDEA, Eclipse o VS Code.
+
+Git (para clonar el repositorio).
+
+📂 #Estructura del Proyecto
+
+
+📁 src/
+│
+├── 📁 modelo/             # Clases de lógica principal
+│   ├── ArregloUnidimensional.java
+│   └── ArregloBidimensional.java
+│
+├── 📁 vista/              # Clases de interacción con el usuario
+│   └── Consola.java
+│
+├── 📁 controlador/        # Clase que coordina modelo y vista
+│   └── Controlador.java
+│
+└── 📄 Main.java           # Punto de entrada del programa
