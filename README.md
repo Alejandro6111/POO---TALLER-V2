@@ -33,7 +33,6 @@ Aplicación Java para gestión de arreglos unidimensionales y bidimensionales co
  ┃ ┗ 📜 Controlador.java  
  ┗ 📜 Main.java
 
- 
 ## 📦 Requisitos
 
 - Java JDK 17+
@@ -53,3 +52,6 @@ mvn clean package
 # 3. Ejecutar
 java -jar target/gestor-arreglos-1.0.jar
 ```
+## Diagrama de clases
+
+![image](https://github.com/user-attachments/assets/59e3917c-eace-4361-b7fb-5229563fbe67)
