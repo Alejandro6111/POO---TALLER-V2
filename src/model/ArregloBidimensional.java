@@ -34,7 +34,7 @@ public class ArregloBidimensional {
     /* ======= METODOS DE CARGA ======= */
 
     /** Llena la matriz con valores aleatorios. */
-    public void cargarAleatorio() {
+    public void mCargarAleatorio() {
         for (int fila = 0; fila < datos.length; fila++) {
             for (int columna = 0; columna < datos[fila].length; columna++) {
                 datos[fila][columna] = randomGenerator.nextInt(100);
@@ -49,7 +49,7 @@ public class ArregloBidimensional {
      * @param columnas numero de columnas
      * @return matriz poblada
      */
-    public static int[][] generarAleatorio(int filas, int columnas) {
+    public static int[][] mGenerarAleatorio(int filas, int columnas) {
         int[][] matriz = new int[filas][columnas];
         Random generador = new Random();
         for (int fila = 0; fila < filas; fila++) {
@@ -65,7 +65,7 @@ public class ArregloBidimensional {
      *
      * @param lector scanner compartido
      */
-    public void cargarManual(Scanner lector) {
+    public void mCargarManual(Scanner lector) {
         for (int fila = 0; fila < datos.length; fila++) {
             for (int columna = 0; columna < datos[fila].length; columna++) {
                 System.out.printf("Valor [%d][%d]: ", fila, columna);
@@ -82,7 +82,7 @@ public class ArregloBidimensional {
      * @param lector   scanner
      * @return matriz recien creada
      */
-    public static int[][] crearManual(int filas, int columnas, Scanner lector) {
+    public static int[][] mCrearManual(int filas, int columnas, Scanner lector) {
         int[][] matriz = new int[filas][columnas];
         for (int fila = 0; fila < filas; fila++) {
             for (int columna = 0; columna < columnas; columna++) {
@@ -100,7 +100,7 @@ public class ArregloBidimensional {
      * @param lector  scanner
      * @return referencia a la misma matriz modificada
      */
-    public static int[][] cargarEn(int[][] destino, Scanner lector) {
+    public static int[][] mCargarEn(int[][] destino, Scanner lector) {
         for (int fila = 0; fila < destino.length; fila++) {
             for (int columna = 0; columna < destino[fila].length; columna++) {
                 System.out.printf("Valor [%d][%d]: ", fila, columna);
@@ -119,15 +119,15 @@ public class ArregloBidimensional {
      * @param columna  indice de columna
      * @param valor    valor a insertar
      */
-    public void asignar(int fila, int columna, int valor) {
+    public void mAsignar(int fila, int columna, int valor) {
         if (fila < 0 || fila >= datos.length) return;
         if (columna < 0 || columna >= datos[0].length) return;
         datos[fila][columna] = valor;
     }
 
     /** Imprime la matriz interna en formato cuadricula. */
-    public void imprimir() {
-        imprimir(datos);
+    public void mImprimir() {
+        mImprimir(datos);
     }
 
     /**
@@ -135,7 +135,7 @@ public class ArregloBidimensional {
      *
      * @param matriz matriz a imprimir
      */
-    public static void imprimir(int[][] matriz) {
+    public static void mImprimir(int[][] matriz) {
         for (int[] fila : matriz) {
             System.out.print("| ");
             for (int valor : fila) {
@@ -150,8 +150,8 @@ public class ArregloBidimensional {
      *
      * @return suma total
      */
-    public int sumar() {
-        return sumar(datos);
+    public int mSumar() {
+        return mSumar(datos);
     }
 
     /**
@@ -160,7 +160,7 @@ public class ArregloBidimensional {
      * @param matriz matriz a sumar
      * @return suma total
      */
-    public static int sumar(int[][] matriz) {
+    public static int mSumar(int[][] matriz) {
         int total = 0;
         for (int[] fila : matriz) {
             for (int valor : fila) {
@@ -177,7 +177,7 @@ public class ArregloBidimensional {
      * @param segunda segunda matriz
      * @return nueva matriz con las sumas
      */
-    public static int[][] sumarMatrices(int[][] primera, int[][] segunda) {
+    public static int[][] mSumarMatrices(int[][] primera, int[][] segunda) {
         int filasComunes = Math.min(primera.length, segunda.length);
         int columnasComunes = Math.min(primera[0].length, segunda[0].length);
         int[][] resultado = new int[filasComunes][columnasComunes];
@@ -195,7 +195,7 @@ public class ArregloBidimensional {
      *
      * @return suma de pares
      */
-    public int sumarPares() {
+    public int mSumarPares() {
         int sumaPares = 0;
         for (int[] fila : datos) {
             for (int valor : fila) {
@@ -212,7 +212,7 @@ public class ArregloBidimensional {
      *
      * @return suma de impares
      */
-    public int sumarImpares() {
+    public int mSumarImpares() {
         int sumaImpares = 0;
         for (int[] fila : datos) {
             for (int valor : fila) {
@@ -229,7 +229,7 @@ public class ArregloBidimensional {
      *
      * @return valor minimo
      */
-    public int menor() {
+    public int mMenor() {
         int minimo = datos[0][0];
         for (int[] fila : datos) {
             for (int valor : fila) {
@@ -246,7 +246,7 @@ public class ArregloBidimensional {
      *
      * @return valor maximo
      */
-    public int mayor() {
+    public int mMayor() {
         int maximo = datos[0][0];
         for (int[] fila : datos) {
             for (int valor : fila) {
@@ -263,7 +263,7 @@ public class ArregloBidimensional {
      *
      * @return matriz interna
      */
-    public int[][] getDatos() {
+    public int[][] mGetDatos() {
         return datos;
     }
 }
