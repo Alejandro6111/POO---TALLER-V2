@@ -4,10 +4,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Gestiona toda la interacción con el usuario por consola
+ * Gestiona toda la interaccion con el usuario por consola
  * (entradas y salidas de datos).
  *
- * <p>No contiene lógica de negocio; solo E/S.</p>
+ * <p>No contiene logica de negocio; solo E/S.</p>
  *
  * @author Equipo
  */
@@ -16,27 +16,27 @@ public class Vista {
     /** Lector de consola compartido con otros componentes. */
     private final Scanner lector = new Scanner(System.in);
 
-    /* ---------- Menús principales ---------- */
+    /* ---------- Menus principales ---------- */
 
     /**
-     * Muestra el menú raíz de la aplicación.
+     * Muestra el menu raiz de la aplicacion.
      *
-     * @return número de opción elegida por el usuario
+     * @return numero de opcion elegida por el usuario
      */
-    public int mostrarMenuPrincipal() {
+    public int mMostrarMenuPrincipal() {
         System.out.println("\n─── MENU PRINCIPAL ───");
         System.out.println("1. Arreglo unidimensional");
         System.out.println("2. Arreglo bidimensional");
         System.out.println("3. Salir");
-        return leerEntero("Seleccione una opción");
+        return mLeerEntero("Seleccione una opcion");
     }
 
     /**
-     * Muestra el menú de operaciones sobre un arreglo 1D.
+     * Muestra el menu de operaciones sobre un arreglo 1D.
      *
-     * @return opción elegida
+     * @return opcion elegida
      */
-    public int mostrarMenuArreglo1D() {
+    public int mMostrarMenuArreglo1D() {
         System.out.println("\n── Arreglo Unidimensional ──");
         System.out.println(" 1. Crear aleatorio");
         System.out.println(" 2. Crear manual");
@@ -48,17 +48,17 @@ public class Vista {
         System.out.println(" 8. Obtener mayor");
         System.out.println(" 9. Asignar valor");
         System.out.println("10. Sumar un arreglo ingresado");
-        System.out.println("11. Sumar posicion a posición dos arreglos");
+        System.out.println("11. Sumar posicion a posicion dos arreglos");
         System.out.println(" 0. Volver");
-        return leerEntero("Seleccione una opción");
+        return mLeerEntero("Seleccione una opcion");
     }
 
     /**
-     * Muestra el menú de operaciones sobre una matriz 2D.
+     * Muestra el menu de operaciones sobre una matriz 2D.
      *
-     * @return opción elegida
+     * @return opcion elegida
      */
-    public int mostrarMenuArreglo2D() {
+    public int mMostrarMenuArreglo2D() {
         System.out.println("\n── Arreglo Bidimensional ──");
         System.out.println(" 1. Crear aleatorio");
         System.out.println(" 2. Crear manual");
@@ -70,27 +70,27 @@ public class Vista {
         System.out.println(" 8. Obtener mayor");
         System.out.println(" 9. Asignar valor");
         System.out.println("10. Sumar una matriz ingresada");
-        System.out.println("11. Sumar posicion a posición dos matrices");
+        System.out.println("11. Sumar posicion a posicion dos matrices");
         System.out.println(" 0. Volver");
-        return leerEntero("Seleccione una opcion");
+        return mLeerEntero("Seleccione una opcion");
     }
 
     /* ---------- Utilidades ---------- */
 
     /**
-     * Lee un número entero desde la consola con control de errores.
+     * Lee un numero entero desde la consola con control de errores.
      *
      * @param mensaje texto que se muestra antes de la lectura
      * @return entero introducido por el usuario
      */
-    public int leerEntero(String mensaje) {
+    public int mLeerEntero(String mensaje) {
         while (true) {
             try {
                 System.out.print(mensaje + ": ");
                 return lector.nextInt();
             } catch (InputMismatchException ex) {
-                lector.nextLine(); // descarta entrada inválida
-                System.out.println("Entrada inválida. Intente de nuevo.");
+                lector.nextLine(); // descarta entrada invalida
+                System.out.println("Entrada invalida. Intente de nuevo.");
             }
         }
     }
@@ -100,22 +100,22 @@ public class Vista {
      *
      * @param texto mensaje a mostrar
      */
-    public void mostrarMensaje(String texto) {
+    public void mMostrarMensaje(String texto) {
         System.out.println(texto);
     }
 
     /** Cierra el {@link Scanner} asociado a la consola. */
-    public void cerrar() {
+    public void mCerrar() {
         lector.close();
     }
 
     /**
-     * Devuelve el {@link Scanner} interno para que otros módulos
-     * puedan reutilizarlo y evitar múltiples instancias.
+     * Devuelve el {@link Scanner} interno para que otros modulos
+     * puedan reutilizarlo y evitar multiples instancias.
      *
      * @return scanner compartido
      */
-    public Scanner getScanner() {
+    public Scanner mGetScanner() {
         return lector;
     }
 }
