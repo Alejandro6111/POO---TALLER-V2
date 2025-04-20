@@ -43,14 +43,14 @@ Aplicación Java para gestión de arreglos unidimensionales y bidimensionales co
 
 ```bash
 # 1. Clonar repositorio
-git clone https://github.com/tu-usuario/gestor-arreglos.git
-cd gestor-arreglos
+git clone https://github.com/tu-usuario/POO---TALLER-V2.git
+cd POO---TALLER-V2
 
-# 2. Compilar (con Maven)
-mvn clean package
+# 2. Compilar (con Java estándar)
+javac -d bin src/controller/*.java src/model/*.java src/view/*.java App.java
 
 # 3. Ejecutar
-java -jar target/gestor-arreglos-1.0.jar
+java -cp bin App
 ```
 ## Diagrama de clases
 
