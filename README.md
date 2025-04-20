@@ -54,4 +54,5 @@ java -jar target/gestor-arreglos-1.0.jar
 ```
 ## Diagrama de clases
 
-![image](https://github.com/user-attachments/assets/59e3917c-eace-4361-b7fb-5229563fbe67)
+![image](https://github.com/user-attachments/assets/d6944a5e-936c-4174-8249-9f0175b60fdb)
+
