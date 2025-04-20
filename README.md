@@ -1,46 +1,55 @@
-📂 #Proyecto Java: Gestor de Arreglos Unidimensionales y Bidimensionales 
+# 📂 Gestor de Arreglos en Java - POO + MVC
 
-🔹 Versión: 1.0
+![Java](https://img.shields.io/badge/Java-17%2B-blue)
+![POO](https://img.shields.io/badge/Paradigma-POO-success)
+![MVC](https://img.shields.io/badge/Patrón-MVC-important)
 
-🔹 Lenguaje: Java
+Aplicación Java para gestión de arreglos unidimensionales y bidimensionales con:
+- 15+ operaciones por tipo de arreglo
+- Interacción por consola
+- Arquitectura MVC
 
-🔹 Paradigma: Programación Orientada a Objetos (POO)
+## 🚀 Características principales
 
-🔹 Patrón de Diseño: Modelo-Vista-Controlador (MVC)
+### 🔹 Para arreglos unidimensionales
+✔️ Carga aleatoria/manual  
+✔️ Operaciones matemáticas (suma, pares/impares)  
+✔️ Búsqueda de máximo/mínimo  
+✔️ Impresión formateada  
 
-📌 #Descripción del Proyecto
+### 🔹 Para arreglos bidimensionales
+✔️ Todas las operaciones adaptadas a matrices  
+✔️ Suma por filas/columnas  
+✔️ Búsqueda de extremos  
 
-Este proyecto implementa un gestor de arreglos (arrays) en Java, con operaciones para:
+## 🛠️ Estructura del proyecto
+📦 src  
+ ┣ 📂 modelo  
+ ┃ ┣ 📜 ArregloUnidimensional.java  
+ ┃ ┗ 📜 ArregloBidimensional.java  
+ ┣ 📂 vista  
+ ┃ ┗ 📜 Consola.java  
+ ┣ 📂 controlador  
+ ┃ ┗ 📜 Controlador.java  
+ ┗ 📜 Main.java
 
-✅ Arreglos unidimensionales (15 métodos).
+ 
+## 📦 Requisitos
 
-✅ Arreglos bidimensionales (mismos métodos adaptados).
+- Java JDK 17+
+- Maven (opcional)
+- Git
 
-✅ Interacción por consola mediante menús.
+## 🖥️ Cómo ejecutarlo
 
-✅ Patrón MVC para una estructura limpia y mantenible.
+```bash
+# 1. Clonar repositorio
+git clone https://github.com/tu-usuario/gestor-arreglos.git
+cd gestor-arreglos
 
-⚙️ #Requisitos
+# 2. Compilar (con Maven)
+mvn clean package
 
-Java JDK 8+ (para ejecutar el proyecto).
-
-IDE recomendado: IntelliJ IDEA, Eclipse o VS Code.
-
-Git (para clonar el repositorio).
-
-📂 #Estructura del Proyecto
-
-
-📁 src/
-│
-├── 📁 modelo/             # Clases de lógica principal
-│   ├── ArregloUnidimensional.java
-│   └── ArregloBidimensional.java
-│
-├── 📁 vista/              # Clases de interacción con el usuario
-│   └── Consola.java
-│
-├── 📁 controlador/        # Clase que coordina modelo y vista
-│   └── Controlador.java
-│
-└── 📄 Main.java           # Punto de entrada del programa
+# 3. Ejecutar
+java -jar target/gestor-arreglos-1.0.jar
+```
