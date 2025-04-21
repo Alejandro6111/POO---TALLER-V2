@@ -36,7 +36,6 @@ Aplicación Java para gestión de arreglos unidimensionales y bidimensionales co
 ## 📦 Requisitos
 
 - Java JDK 17+
-- Maven (opcional)
 - Git
 
 ## 🖥️ Cómo ejecutarlo
